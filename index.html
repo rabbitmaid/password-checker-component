@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Checker</title>
+  </head>
+  <body>
+    
+    <main class="bg-gradient-to-b from-amber-950 to-slate-900">
+
+        <div class="min-h-screen py-5 px-5 flex items-center justify-center">
+
+            <form action="" class="max-w-md w-full shrink-0">
+                <div class="input__container">
+
+                    <label for="password" class="sr-only">Password</label>
+
+                    <div class="relative w-full">
+
+                        <input type="password" class="input__password border border-neutral-500 py-2 px-3 rounded-lg bg-white w-full" name="" id="password" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{12,}$" required placeholder="Your Password" />
+
+                        <img src="eye.svg" id="passwordIcon" class="input__icon w-5 absolute top-2.5 right-2.5 cursor-pointer" alt="Show/Hide Icon" title="Show/Hide Icon" role="button" tabindex="0" />
+
+                    </div>
+
+                    <div class="password-strength hidden py-5 px-3 bg-neutral-100 rounded-lg mt-5">
+
+                        <p class="password-strength-indicator flex items-center gap-2">
+                          Password Strength: 
+                          <img id="password-strength-icon" class="w-6" src="" alt="">
+                          <span id="password-strength-text" class="text-lg text-red-500"></span>
+                        </p>
+
+                        <ul class="password-strength-items mt-5">
+                            <!-- <li class="flex gap-2 items-center">
+                              <img src="check.svg" class="w-8" alt="">
+                              At least 12 characters
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>
